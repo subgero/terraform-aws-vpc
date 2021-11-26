@@ -7,9 +7,9 @@ terraform {
   }
 }
 provider "aws" {
-  region = var.region
-#   shared_credentials_file = "$HOME/.aws/credentials"
-#   profile                 = "labprofile"
+  region  = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
 resource "aws_vpc" "main" {
